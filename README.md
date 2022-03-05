@@ -18,4 +18,12 @@ Data --- CSV containing more than 34,000 organizations that have received fundin
 
 ## Results
 
-### Preprocessing Data for a Neural Network Model
+### Data Preprocessing for Neural Network Model
+
+### Compile, Train, and Evaluate the Model
+design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. 
+
+n_input X n_neurons + n_bias=3520
+
+### Model Optimization
+optimize your model in order to achieve a target predictive accuracy higher than 75%
