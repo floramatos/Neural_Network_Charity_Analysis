@@ -24,47 +24,32 @@ The raw dataset including 34,299 rows and 12 columns was first preprocessed to p
 The next step was to design a neural network model to create a binary classification model that can predict if a funded organization will be successful based on the features in the dataset.
 
 Neural Network model characteristics:
-	- Input:
-		- 43 features
-	- First hidden layer: 
-		- 80 neurons
-		- Relu activation function
-	- Second hidden layer: 
-		- 30 neurons
-		- Relu activation function
-	- Output:
-		- 1 target
-		- Sigmoid activation function
+- Input: 43 features
+- First hidden layer: 80 neurons, Relu activation function
+- Second hidden layer: 30 neurons, Relu activation function
+- Output: 1 target, Sigmoid activation function
 
 After running through 100 epochs, the model loss was still high at 4.48 and its accuracy was lower than ideal, explaining only 61% of the outcomes. Further steps are needed to improve the neural network model.
 
-*** Add model summary, loss and accuracy values
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Model_structure.png?raw=true)
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Model_evaluation.png?raw=true)
+
 
 ### Model Optimization
-The final step in the analysis consisted to model optimization. As the initial neural network model only achieved 61% accuracy, two attemps were made to improve the model with a target predictive accuracy higher than 75%.
+The final step in the analysis consisted to model optimization. As the initial neural network model only achieved 61% accuracy, attemps were made to improve the model with a target predictive accuracy higher than 75%.
 
-Method 1 - Changing data preprocessing
-Given that two columns containing identification were dropped in the data preprocessing stage, it was tested whether keeping the "NAME" column, containing funded organizations names, would improve the model. The new model with 48 input variables, although showing an improved loss of 1.01, explained only 53% of outcomes.
-
-*** Add model summary, loss and accuracy values
-
-Method 2 - Evaluate different hyperparameters
-A function letting kerastuner identify the best activation function and number of neurons for each layer was created to evaluate different hyperparameter options.
+A function letting kerastuner identify the best activation function and number of neurons for each layer was created to evaluate different hyperparameter options. The new model showed an improved loss of 0.55 and explained 73% of outcomes.
 
 Optimized Neural Network model characteristics:
-	- Input:
-		- 43 features
-	- First hidden layer: 
-		- 80 neurons
-		- Tahn activation function
-	- Second hidden layer: 
-		- 30 neurons
-		- Relu activation function
-	- Output:
-		- 1 target
-		- Sigmoid activation function
+- Input: 43 features
+- First hidden layer: 21 neurons, Relu activation function
+- Second hidden layer: 21 neurons, Relu activation function
+- Output: 1 target, Sigmoid activation function
 
-*** Add model summary, loss and accuracy values
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Optimized_Model_structure.png?raw=true)
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Optimized_Model_evaluation.png?raw=true)
+
+The optinized model indicates that changing the activation function to Tahn and/or increasing the number of layers did not result in an improved model. The only factor that seemed to optimize the model was the reduction in the number of neurons in each hidden layer.
 
 ## Summary
-In sum, the present project aimed at building a neural network prediction model to determine whether applicants to a fund wwould be successful if funded. The first Neural Network model created with two hidden layers using Relu as activation function achieved 61% of accuracy. A second optimized model consisting of ... hidden layers with Tahn as activation function achieved ... of accuracy. The goal of achieving a target predictive accuracy higher than 75% was ... schieved.
+In sum, the present project aimed at building a neural network prediction model to determine whether applicants to a fund wwould be successful if funded. The first Neural Network model created with two hidden layers using Relu as activation function achieved 61% of accuracy. A second optimized model consisting also of two hidden layers with Relu as activation function achieved 73% of accuracy. In fact, decreasing the number of neurons was the only factor impacting accuracy. The goal of achieving a target predictive accuracy higher than 75% was not achieved.
