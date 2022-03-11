@@ -6,17 +6,19 @@ Supporting organizations by funding them entails risks, as some organizations mi
 ## Results
 ### Data Preprocessing
 The raw dataset including 34,299 rows and 12 columns was first preprocessed to prepare it for the Neural Network Analysis. Steps in data preprocessing included:
-	- Dropping two identification columns, "EIN" and "NAME".
-	- Identifying categorical variables with more than 10 unique values. Two columns were identified: "APPLICATION_TYPE" with 17 and "CLASSIFICATION" with 71 unique values.
-	- Binning "APPLICATION_TYPE" and "CLASSIFICATION" unique values based on the density plots of the value counts. See plots below. The "APPLICATION_TYPE" values with count less than 500 were binned together decreasing the number of unique values to 9. The "CLASSIFICATION" values with count less than 1500 were binned together decreasing the number of unique values to 6.
 
-Images/Screen Shot 2022-03-08 at 9.26.04 PM.png
-Images/Screen Shot 2022-03-08 at 9.26.56 PM.png
+- Dropping two identification columns, "EIN" and "NAME".
+- Identifying categorical variables with more than 10 unique values. Two columns were identified: "APPLICATION_TYPE" with 17 and "CLASSIFICATION" with 71 unique values.
+- Binning "APPLICATION_TYPE" and "CLASSIFICATION" unique values based on the density plots of the value counts. See plots below. The "APPLICATION_TYPE" values with count less than 500 were binned together decreasing the number of unique values to 9. The "CLASSIFICATION" values with count less than 1500 were binned together decreasing the number of unique values to 6.
 
-	- Transforming the categorial variables into dummy variables using one-hot encoding.
-	- Splitting the data into features, X = 43 independent variables, and target, y = 1 dichotomic dependent variable ("IS_SUCCESSFUL": measured whether the money was used effectively), arrays.
-	- Splitting the dataset into training and testing datsets.
-	- Standardizing the distribution of the numeric independent variables (Mean = 0, SD = 1).
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Screen Shot 2022-03-08 at 9.26.04 PM.png?raw=true)
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Screen Shot 2022-03-08 at 9.26.56 PM.png?raw=true)
+
+
+- Transforming the categorial variables into dummy variables using one-hot encoding.
+- Splitting the data into features, X = 43 independent variables, and target, y = 1 dichotomic dependent variable ("IS_SUCCESSFUL": measured whether the money was used effectively), arrays.
+- Splitting the dataset into training and testing datsets.
+- Standardizing the distribution of the numeric independent variables (Mean = 0, SD = 1).
 
 
 ### The Neural Network Model
