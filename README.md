@@ -11,9 +11,8 @@ The raw dataset including 34,299 rows and 12 columns was first preprocessed to p
 - Identifying categorical variables with more than 10 unique values. Two columns were identified: "APPLICATION_TYPE" with 17 and "CLASSIFICATION" with 71 unique values.
 - Binning "APPLICATION_TYPE" and "CLASSIFICATION" unique values based on the density plots of the value counts. See plots below. The "APPLICATION_TYPE" values with count less than 500 were binned together decreasing the number of unique values to 9. The "CLASSIFICATION" values with count less than 1500 were binned together decreasing the number of unique values to 6.
 
-![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Screen Shot 2022-03-08 at 9.26.04 PM.png?raw=true)
-![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/Screen Shot 2022-03-08 at 9.26.56 PM.png?raw=true)
-
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/application_plot.png?raw=true)
+![alt text](https://github.com/floramatos/Neural_Network_Charity_Analysis/blob/main/Images/classification_plot.png?raw=true)
 
 - Transforming the categorial variables into dummy variables using one-hot encoding.
 - Splitting the data into features, X = 43 independent variables, and target, y = 1 dichotomic dependent variable ("IS_SUCCESSFUL": measured whether the money was used effectively), arrays.
